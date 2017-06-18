@@ -5,7 +5,7 @@ class NewGameForm extends Component {
   constructor(props){
     super(props);
     this.state = {
-      input: 5,
+      input: this.props.boardSize,
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);

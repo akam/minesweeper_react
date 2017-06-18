@@ -8,7 +8,7 @@ class Board extends Component {
   constructor(props){
     super(props);
     this.state = {
-      boardSize: 0,
+      boardSize: 5,
       squares: [],
       visited: 0,
       status: 3,
@@ -184,7 +184,7 @@ class Board extends Component {
       <div>
         {this.state.status === 1 ? <h1>You lose!</h1> : '' }
         {this.state.status === 2 ? <h1>You Win!</h1> : '' }
-        {this.state.status > 0 ? <NewGameForm handleSubmit={this.handleSubmit}/> : ''}
+        {this.state.status > 0 ? <NewGameForm boardSize={this.state.boardSize} handleSubmit={this.handleSubmit}/> : ''}
         {rows}
       </div>
     )
